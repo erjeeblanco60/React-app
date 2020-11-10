@@ -11,8 +11,11 @@ function App() {
       {id: 'CG3', text: 'Help other student in the Course'},
     ])
 
+      //rerender the coursegoals array
       const addNewGoalHandler = (newGoal) => { 
-        setCourseGoals(courseGoals.concat(newGoal))
+        setCourseGoals((prevCourseGoals)=> { 
+            return prevCourseGoals.concat(newGoal)
+        })
       }
 
   return (
